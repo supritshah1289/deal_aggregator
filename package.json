@@ -1,0 +1,39 @@
+{
+  "name": "deal-aggregator",
+  "version": "1.0.0",
+  "description": "This is a Single page MVC application. The application aggregate deals so the user can browse and buy cheapest deals available across all the websites. This application retrieve data from Sqoot api and populate all the deals.  ![](http://i.giphy.com/fJKG1UTK7k64w.gif)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supritshah1289/deal_aggregator.git"
+  },
+  "keywords": [
+    "deals",
+    "daily-deals",
+    "best-buy",
+    "electronics",
+    "groupon",
+    "living-social"
+  ],
+  "author": "Supritkumar Shah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supritshah1289/deal_aggregator/issues"
+  },
+  "homepage": "https://github.com/supritshah1289/deal_aggregator#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "express-session": "^1.13.0",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.1.18",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "request": "^2.72.0"
+  }
+}

@@ -1,0 +1,23 @@
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo"><img src="/images/logo.png" height="80px" width="100px" alt=""></a>
+
+
+      <%if(user) {%>
+        <ul class="right">
+          <li class="active"><a href="/user/logout">Logout</a></li>
+          <li class="active"><a href="#">Contact Us</a></li>
+        </ul>
+      <% } else {%>
+          <ul class="right">
+          <li class="active"><a href="/user/create_user">Sign Up</a></li>
+          <li class="active"><a href="/user/login">Login</a></li>
+          <li class="active"><a href="#">Contact Us</a></li>
+        </ul>
+      <% } %>
+
+
+      </div>
+    </nav>
+  </div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <% include ../partials/head %>
+   <body>
+      <% include ../partials/nav %>
+      <main class="container">
+
+           <form action="/user/create_user" method="post">
+             <label for="">First Name:</label>
+             <input type="text" name="fname"><br>
+             <label for="">Last Name:</label>
+             <input type="text" name="lname"><br>
+             <label for="">Email:</label>
+             <input type="text" name="email"><br>
+             <label for="">Password:</label>
+             <input type="password" name="password"><br>
+             <input type="Submit" value="Create New User">
+            </form>
+
+
+
+
+         <!-- <div class="row">
+            <form class="col s12" action="/user/create_user" method="POST">
+               <div class="row">
+                  <div class="input-field col s6">
+                     <input placeholder="Placeholder" name="fname" id="first_name" type="text" class="validate">
+                     <label for="first_name">First Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                     <input id="last_name" type="text" name="lname" class="validate">
+                     <label for="last_name">Last Name</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s12">
+                     <input id="password" type="password" name="password"class="validate">
+                     <label for="password">Password</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s12">
+                     <input id="email" type="email" name="email" class="validate">
+                     <label for="email">Email</label>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="input-field col s12">
+                     <input type="submit" value="Create User">
+                  </div>
+               </div>
+            </form>
+         </div> -->
+
+      </main>
+      <% include ../partials/footer %>
+   </body>
+</html>

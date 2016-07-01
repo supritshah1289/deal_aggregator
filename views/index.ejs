@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <% include ./partials/head %>
+   <body>
+      <% include ./partials/nav %>
+      <% if(user){%>
+      <main class="teal lighten-2">
+         <h4>Welcome, <%= user.fname %> <%= user.lname%></h4>
+         <div class="userdeals">
+            <div class="row">
+               <% deals.forEach(function(item){ %>
+               <!-- <p><%= item.deal['title'] %></p>
+                  <p><%= item.deal['merchant'].region%></p> -->
+              <div class="deal">
+               <div class="col s12 m8">
+                  <div class="card">
+                     <div class="card-image">
+                        <img src="<%= item.deal['image_url'] %>" class="responsive-img" >
+                     </div>
+                     <div class="card-content">
+                        <p><%= item.deal['short_title'] %>: $<%= item.deal['price']%> State: <%= item.deal['merchant'].region%></p>
+                     </div>
+                     <div class="card-action">
+                        <p><a href="<%= item.deal['untracked_url'] %>" target="_blank"> Buy Me!!</a> </p>
+                     </div>
+                  </div>
+               </div>
+              </div>
+               <% }) %>
+            </div>
+         </div>
+      </main>
+      <% include ./partials/footer %>
+      <%} else { %>
+      <main class="teal lighten-2">
+         <h3>Welcome, Guest</h3>
+         <div class="Guestdeal">
+            <div class="row">
+               <% deals.forEach(function(item){ %>
+               <!-- <p><%= item.deal['title'] %></p>
+                  <p><%= item.deal['merchant'].region%></p> -->
+               <div class="deal">
+                  <div class="col s12 m8">
+                     <div class="card">
+                        <div class="card-image">
+                           <img src="<%= item.deal['image_url'] %>" class="responsive-img" >
+                        </div>
+                        <div class="card-content">
+                           <p><%= item.deal['short_title'] %>: $<%= item.deal['price']%> State: <%= item.deal['merchant'].region%></p>
+                        </div>
+                        <div class="card-action">
+                           <p><a href="<%= item.deal['untracked_url'] %>" target="_blank"> Buy Me!!</a> </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <% }) %>
+            </div>
+         </div>
+      </main>
+      <% include ./partials/footer %>
+      <% } %>
+   </body>
+</html>

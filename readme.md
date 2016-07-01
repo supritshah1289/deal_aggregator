@@ -3,6 +3,7 @@ This is a Single page MVC application. The application aggregate deals so the us
 ![](http://i.giphy.com/fJKG1UTK7k64w.gif)
 
 ##API Reference##
+Note: The API will not work after 30 days. The subscription expires. 
 [Sqoot](https://www.sqoot.com/)
 Sqoot API is partner up with so many providers. Some of the providers are 
 * Deals Provider List
