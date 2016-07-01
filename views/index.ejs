@@ -6,6 +6,23 @@
       <% if(user){%>
       <main class="teal lighten-2">
          <h4>Welcome, <%= user.fname %> <%= user.lname%></h4>
+         <div class="search">
+            <div class="fields">
+               Place: <input type="text"  placeholder="Store, online" id="place">
+            </div>
+
+            <div class="fields">
+               Page number: <input type="text"  placeholder="1, 2, 3" id="pageNo">
+            </div>
+            <div class="fields">
+               Deals per page: <input type="text"  placeholder="10, 20, 30" id="perPage">
+            </div>
+
+            <div class="fields">
+               <button id="mySearch"> Search</button>
+            </div>
+         </div>
+
          <div class="userdeals">
             <div class="row">
                <% deals.forEach(function(item){ %>
@@ -22,6 +39,7 @@
                      </div>
                      <div class="card-action">
                         <p><a href="<%= item.deal['untracked_url'] %>" target="_blank"> Buy Me!!</a> </p>
+                        <button id="fav">Add to favorite</button>
                      </div>
                   </div>
                </div>
@@ -34,7 +52,8 @@
       <%} else { %>
       <main class="teal lighten-2">
          <h3>Welcome, Guest</h3>
-         <div class="Guestdeal">
+         <div class="guestdeal">
+
             <div class="row">
                <% deals.forEach(function(item){ %>
                <!-- <p><%= item.deal['title'] %></p>

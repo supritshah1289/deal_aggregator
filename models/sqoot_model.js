@@ -8,8 +8,9 @@ dailyDeals (req, res, next){
    url: 'http://api.sqoot.com/v2/deals',
    qs: {
      'api_key': SQOOTPRIVATE,
-     'per_page': 30,
-     'page': 44
+     'per_page': 50,
+     'page': 55,
+     'online':true
    },
    headers: {
      'User-Agent': 'request'
@@ -26,18 +27,3 @@ dailyDeals (req, res, next){
 }//end daily deals
 
 } // module.exports
-
-
-
-  // request('http://api.sqoot.com/v2/deals?api_key=' + SQOOTPRIVATE + '&per_page=20', function(err, res, body) {
-  //               if (err) throw err;
-  //               let data = JSON.parse(body); //making json object
-  //               let results = data.deals
-  //               console.log(SQOOTPRIVATE);
-  //               results.forEach(function(item) {
-  //                   $price = item.deal.price;
-  //                   $title = item.deal.short_title;
-  //                   console.log(`Title: ${$title}, Price: ${$price}`)
-  //                       // console.log(item)
-  //               })
-  //           });
