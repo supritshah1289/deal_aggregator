@@ -1,9 +1,13 @@
 {
   "name": "deal-aggregator",
   "version": "1.0.0",
+  "engines":{
+    "node": "6.2.0"
+  },
   "description": "This is a Single page MVC application. The application aggregate deals so the user can browse and buy cheapest deals available across all the websites. This application retrieve data from Sqoot api and populate all the deals.  ![](http://i.giphy.com/fJKG1UTK7k64w.gif)",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
