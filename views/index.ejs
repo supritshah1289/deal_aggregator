@@ -24,27 +24,8 @@
          </div>
 
          <div class="userdeals">
-            <div class="row">
-               <% deals.forEach(function(item){ %>
-               <!-- <p><%= item.deal['title'] %></p>
-                  <p><%= item.deal['merchant'].region%></p> -->
-              <div class="deal">
-               <div class="col s12 m8">
-                  <div class="card">
-                     <div class="card-image">
-                        <img src="<%= item.deal['image_url'] %>" class="responsive-img" >
-                     </div>
-                     <div class="card-content">
-                        <p><%= item.deal['short_title'] %>: $<%= item.deal['price']%> State: <%= item.deal['merchant'].region%></p>
-                     </div>
-                     <div class="card-action">
-                        <p><a href="<%= item.deal['untracked_url'] %>" target="_blank"> Buy Me!!</a> </p>
-                        <button id="fav">Add to favorite</button>
-                     </div>
-                  </div>
-               </div>
-              </div>
-               <% }) %>
+            <div class="row" id="user-search-deals">
+
             </div>
          </div>
       </main>

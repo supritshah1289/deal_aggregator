@@ -25,10 +25,19 @@ router.post('/login', loginUser,function(req,res) {
   });
 });
 
+router.get('/collections', function(req,res) {
+  res.render('user/collections', {user: req.session.user});
+});
+
+
+
 router.get('/logout', function(req,res) {
   req.session.destroy(function(err) {
     res.redirect('/');
   });
 });
+
+
+
 
 module.exports = router;
