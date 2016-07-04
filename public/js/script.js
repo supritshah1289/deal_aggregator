@@ -22,7 +22,7 @@ $(document).ready(function() {
     }
 
     $.ajax({
-      url: 'http://api.sqoot.com/v2/deals?api_key=nhai72',
+      url: 'https://api.sqoot.com/v2/deals?api_key=nhai72',
       type: 'GET',
       dataType: 'json',
       data: $userInput
