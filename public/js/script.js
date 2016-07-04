@@ -78,7 +78,7 @@ $(document).ready(function() {
     })
     .complete(function(){
       $(':button').on('click', function(){
-        var favArr = []
+
         var fav = {} // get data, and store key value and console log
         var buttonId = $(this).attr('id')
 
@@ -101,10 +101,10 @@ $(document).ready(function() {
           }
 
           //make an ajax call and pass this object to route
-          favArr.push(fav)
+          $.get( '/user/save', fav, function(data) {
+            console.log("whee!")
+          });
 
-          console.log(fav)
-          console.log(favArr)
 
       })
     })
