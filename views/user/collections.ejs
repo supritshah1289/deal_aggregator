@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <% include ../partials/head %>
+   <body>
+      <% include ../partials/nav %>
+      <% if(user){%>
+      <main class="teal lighten-2">
+         <h2>Explore your collections</h2>
+         <div class="guestdeal">
+            <div class="row">
+               <% favs.forEach(function(item){ %>
+               <div class="deal">
+                  <div class="col s12 m8">
+                     <div class="card">
+                        <div class="card-image">
+                           <img src="<%= item.img %>" class="responsive-img" >
+                        </div>
+                        <div class="card-content">
+                           <p><%= item.title%></p>
+                        </div>
+                        <div class="card-action">
+                           <p><a href="<%= item.link %>" target="_blank"> Buy Me!!</a> </p>
+                           <button class="remove">Remove Favorite</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <% }) %>
+            </div>
+         </div>
+      </main>
+      <% include ../partials/footer %>
+      <% } else {%>
+        <h2>You're not logged in</h2>
+        <% } %>
+   </body>
+</html>

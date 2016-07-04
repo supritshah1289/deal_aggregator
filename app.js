@@ -31,6 +31,7 @@ app.use('/bower_components', express.static(path.join(__dirname,'/bower_componen
 app.use('/', homeRoute);
 app.use('/user', userRoute);
 
+
 app.use(methodOverride('_method'));
 
 // app.use('/',(req, res)=>{
