@@ -105,7 +105,7 @@ $(document).ready(function() {
             console.log("whee!")
           });
 
-
+        $(this).off()
       })
     })
     .fail(function() {
