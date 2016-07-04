@@ -84,4 +84,65 @@ function getCollection (req, res, next){
 }//end get collection
 
 
-module.exports = { createUser, loginUser, saveToCollection, getCollection}
+
+function removeFromCollection(req, res, next) {
+       //entire favorites array
+  let userEmail = req.session.user.email
+  let rimg = req.query.img
+  let rlink = req.query.link
+  let rtitle = req.query.title
+       MongoClient.connect(dbConnection, function(err, db) {
+               db.collection('user').update({
+                       email: userEmail
+                   }, {
+                       $pull: {
+                           favorites: {
+                               title: rtitle,
+                               link: rlink,
+                               title: rtitle
+                           }
+                       }
+                   }, function(err, user) {
+                       if (err) throw err
+                       res.user = user;
+                       next()
+                   }) //end dbcollection
+           }) //end mongoClient
+   } //end save favorite
+
+
+
+// function removeItem (req, res, next){
+//   let userEmail = req.session.user.email
+//   let rimg = req.query.img
+//   let rlink = req.query.link
+//   let rtitle = req.query.title
+
+//   MongoClient.connect(dbConnection, function(err, db){
+
+//     db.collection('user').update(
+//      {email : userEmail},
+//      {$pull :{favorites : {title : rtitle, link : rlink, img: rimg}}},
+//    function (err, user){
+//      if (err) throw err
+//        res.user = user;
+//        next()
+
+//    })
+
+//   })//end mongo client
+// }//end get collection
+
+
+
+
+module.exports = { createUser, loginUser, saveToCollection, getCollection, removeFromCollection}
+
+
+
+
+
+
+
+
+

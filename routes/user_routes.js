@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { createUser, loginUser, saveToCollection, getCollection } = require('../models/user_model');
+const { createUser, loginUser, saveToCollection, getCollection, removeFromCollection } = require('../models/user_model');
 const sqoot                     = require('../models/sqoot_model');
 
 router.get('/create_user', function(req,res) {
@@ -28,18 +28,23 @@ router.post('/login', loginUser,function(req,res) {
 
 router.get('/collections',getCollection,function(req,res){
   // console.log(res.favorites[0].favorites)
-  res.render('user/collections', {
+    res.render('user/collections', {
     user: req.session.user,
     favs: res.favorites[0].favorites
   });
 });
 
 router.get('/save', saveToCollection, function(req,res){
-  var img = req.query.img;
-  var link = req.query.link;
-  var title = req.query['title-price']
- // console.log(img, link, title);
  res.redirect('/');
+})
+
+router.get('/remove', removeFromCollection,function(req, res){
+  console.log(req.session.user.email)
+  console.log(req.query.img)
+  console.log(req.query.link)
+  console.log(req.query.title)
+  res.redirect('user/collections')
+  // console.log(req.query)
 })
 
 router.get('/logout', function(req,res) {

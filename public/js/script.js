@@ -7,7 +7,6 @@ $(document).ready(function() {
     let $pageNo = $('#pageNo').val()
     let $perPage = $('#perPage').val()
 
-
     if($place.length > 0 && $place === 'online'){
       $userInput['online'] = true
     }else{
@@ -114,9 +113,34 @@ $(document).ready(function() {
     .always(function() {
       console.log("complete");
     });
-
-
   })
+
+  $('.remove').on('click', function(){
+
+    let closestDealDiv = $(this).closest('.deal')
+    let img   = closestDealDiv.find('img').attr('src')
+    let title = closestDealDiv.find('p').text()
+    let titleSliced = title.slice(0,-10);
+    let link = closestDealDiv.find('a').attr('href')
+    var deleteItem = {
+      'img' : img,
+      'link': link,
+      'title': titleSliced
+    }
+
+    console.log(deleteItem);
+    console.log(titleSliced)
+
+    //get url, link, title from the above and pass to url to remove from mongo
+
+    $.get( '/user/remove', deleteItem, function(data) {
+            console.log("whee!")
+          });
+
+  });
+
+
+
 
 });
 
