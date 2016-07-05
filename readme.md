@@ -30,9 +30,18 @@ I have always used websites that shows day to day deals like [Dealnews](http://d
 ##User Story##
 ###Guest##
 * Guests can see limited deals when they visit
+
+###Users###
+* Guests can create an account
 * User can login/logout
 * User can see all the deals available through API
 * User can retrieve past deals based on date
+* User can save deals they like on their collection
+* User can remove a deal from their collections
+
+
+Special thanks to [Heidi Powers](https://github.com/monsterpony)
+
 
 ##Home Page Guest##
 ![](http://i.imgur.com/6z0Sjzd.png)
