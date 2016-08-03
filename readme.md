@@ -58,7 +58,7 @@ Click to view project [Deal Effect](https://fierce-forest-94335.herokuapp.com/)
 
 ##Special Thanks##
 Special thanks to [Heidi Powers](https://github.com/monsterpony)
-Sqoot for providing a great trial api
+& Sqoot for providing a great trial api
 
 
 
